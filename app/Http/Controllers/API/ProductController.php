@@ -136,7 +136,6 @@ class ProductController extends APIBaseController
      */
     public function destroy($id)
     {
-        //
         $products = Product::where('id' , $id)->delete();
         return $this->sendResponse($products, "Product deleted successfully.");
     }
